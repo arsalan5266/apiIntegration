@@ -17,6 +17,8 @@ objPosts: Posts|any;
 
 
   ngOnInit(): void {
+
+    // Get Method without parametr
     this.freeApi.getcomments()
     .toPromise()
     .then((data:any) =>{
@@ -25,6 +27,7 @@ objPosts: Posts|any;
       }
     })
 
+    // Get Method with parametr
     this.freeApi.getcommentsbyparameter()
     .toPromise()
     .then((data:any) =>{
@@ -34,6 +37,8 @@ objPosts: Posts|any;
     })
 
 
+
+    // Post Method 
     let opost = new Posts();
 
     opost.body = 'testbody';
